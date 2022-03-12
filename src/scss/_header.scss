@@ -73,7 +73,7 @@ header {
           gap: 30px;
         }
         @supports (-webkit-touch-callout: none) {
-          justify-content: space-around;
+          margin: 20px;
         }
         &__item {
           color: #fff;
