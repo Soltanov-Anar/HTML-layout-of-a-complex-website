@@ -138,6 +138,9 @@ section {
   @media (max-width: 500px) {
     display: none;
   }
+  @media (orientation: landscape) {
+    display: none;
+  }
 }
 
 .follower {
@@ -158,6 +161,9 @@ section {
     z-index: 0;
   }
   @media (max-width: 500px) {
+    display: none;
+  }
+  @media (orientation: landscape) {
     display: none;
   }
 }
