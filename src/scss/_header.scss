@@ -72,12 +72,6 @@ header {
         @media (max-width: 500px) {
           gap: 30px;
         }
-
-        &:not(:last-child) {
-          @supports (-webkit-touch-callout: none) {
-            margin-right: 15px;
-          }
-        }
         &__item {
           color: #fff;
           font-size: 21px;
@@ -85,6 +79,11 @@ header {
           background: #137bef;
           border-radius: 64px;
           padding: 2px 16px;
+          &:not(:last-child) {
+            @supports (-webkit-touch-callout: none) {
+              margin-right: 15px;
+            }
+          }
         }
       }
     }
