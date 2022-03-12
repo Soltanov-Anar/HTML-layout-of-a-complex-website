@@ -1,0 +1,91 @@
+footer {
+  background: #121212 url("../img/footer-bg.png") left 50px no-repeat;
+  padding: 70px 0;
+  @media (max-width: 768px) {
+    background-position: center;
+    background-size: cover;
+  }
+  .footer {
+    display: flex;
+    &__item {
+      margin-left: auto;
+      max-width: 650px;
+      width: 100%;
+      @media (max-width: 768px) {
+        background: rgba(18, 18, 18, 0.5);
+        max-width: 100%;
+        margin: 0;
+        padding: 10px;
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+        .form__title {
+          font-weight: bold;
+          font-size: 32px;
+          line-height: 55px;
+          color: #fff;
+          max-width: 550px;
+          width: 100%;
+          @media (max-width: 768px) {
+            font-size: 28px;
+            line-height: 30px;
+            max-width: 100%;
+            text-align: center;
+          }
+        }
+
+        .form__subtitle {
+          font-size: 16px;
+          line-height: 170%;
+          color: #fff;
+          margin: 35px 0 30px;
+
+          @media (max-width: 768px) {
+            margin: 15px 0;
+          }
+        }
+        .form__input {
+          margin-top: 20px;
+          background: none;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid #fff;
+          padding: 5px 0;
+          font-size: 16px;
+          line-height: 170%;
+          color: #fff;
+          &::placeholder {
+            opacity: 0.8;
+          }
+        }
+        .form__textarea {
+          resize: none;
+          margin-top: 35px;
+          min-height: 100px;
+          background: none;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid #fff;
+          padding: 5px 0;
+          font-size: 16px;
+          line-height: 170%;
+          color: #fff;
+          &::placeholder {
+            opacity: 0.8;
+          }
+        }
+        .form__btn {
+          color: #fff;
+          font-size: 16px;
+          line-height: 150%;
+          border: none;
+          background: none;
+          outline: none;
+          margin: 30px 80px 0 auto;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}

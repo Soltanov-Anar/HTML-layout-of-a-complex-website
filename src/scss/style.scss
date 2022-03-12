@@ -1,0 +1,154 @@
+@import "vars";
+@import "navbar";
+@import "header";
+@import "about";
+@import "tabs";
+@import "accordion";
+@import "contact";
+@import "modal";
+@import "reviews";
+@import "footer";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  cursor: none;
+}
+
+body {
+  background: $bg;
+
+  .overlay {
+    max-width: $containerWidth;
+    width: 100%;
+    margin: 0 auto;
+    border-left: 1px solid rgba(255, 255, 255, 0.11);
+    border-right: 1px solid rgba(255, 255, 255, 0.11);
+    position: relative;
+    overflow: hidden;
+    @media (max-width: 1300px) {
+      border-left: 2px solid rgba(255, 255, 255, 0.11);
+      border-right: 2px solid rgba(255, 255, 255, 0.11);
+    }
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      right: 33%;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.11);
+      z-index: -1;
+    }
+    &::before {
+      left: 33%;
+      right: 0;
+    }
+  }
+}
+
+.container {
+  max-width: $containerWidth;
+  margin: 0 auto;
+  width: 100%;
+  @media (max-width: $m) {
+    max-width: 970px;
+    padding: 0 10px;
+  }
+  @media (max-width: $s) {
+    max-width: 750px;
+  }
+  @media (max-width: $xs) {
+    max-width: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+section {
+  padding: 75px 0;
+  @media (max-width: 768px) {
+    padding: 25px 0;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.section {
+  &__subtitle {
+    font-size: 20px;
+    line-height: 170%;
+    color: #fff;
+  }
+
+  &__title {
+    margin-top: 15px;
+    font-size: 46px;
+    font-weight: bold;
+    line-height: 55px;
+    color: #fff;
+    @media (max-width: 768px) {
+      font-size: 36px;
+      line-height: 40px;
+    }
+    @media (max-width: 500px) {
+      font-size: 28px;
+      line-height: 30px;
+      text-align: center;
+    }
+  }
+}
+
+.cursor {
+  position: fixed;
+  background: #1378ef;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  user-select: none;
+  pointer-events: none;
+  z-index: 9999;
+  transform: scale(1);
+  transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform;
+  &.active {
+    transform: scale(0);
+  }
+}
+
+.follower {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #1378ef;
+  border-radius: 100%;
+  user-select: none;
+  pointer-events: none;
+  z-index: 999;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+    0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) background;
+  transform: translate(2px, 2px);
+  &.active {
+    transform: scale(2);
+    background: #1378ef;
+    z-index: 0;
+  }
+}
