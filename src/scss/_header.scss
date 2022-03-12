@@ -72,6 +72,12 @@ header {
         @media (max-width: 500px) {
           gap: 30px;
         }
+
+        &:not(:last-child) {
+          @supports (-webkit-touch-callout: none) {
+            margin-right: 15px;
+          }
+        }
         &__item {
           color: #fff;
           font-size: 21px;
